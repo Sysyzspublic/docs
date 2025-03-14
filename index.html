@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: white;
+            }
+        }
+
+        h1 {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            width: 90%;
+        }
+
+        .box {
+            width: 30%;
+            height: 100px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            font-size: 1.2rem;
+            box-sizing: border-box;
+            border: 1px solid #353535;
+        }
+
+        .box:hover {
+            border: 2px solid #2775b6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: inherit;
+        }
+
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .box {
+                width: 80%; /* 移动设备上每个容器宽度占80% */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>邵阳市第一中学校园公共服务</h1>
+    <p style="text-align: center;">感谢您使用邵阳市第一中学校园公共服务，为了您能更好地使用我们所提供的服务，请您阅读此服务的文档内容</p>
+    <div class="container">
+        <a href="./help/index.html" class="box">公共服务政策类</a>
+       <!-- <a href="#" class="box">容器 2</a> --> 
+       <!-- <a href="#" class="box">容器 3</a> -->
+    </div>
+</body>
+<footer style="position: fixed; bottom: 0; width: 100%; margin: 0; background-color: rgba(255, 255, 255, 0.7); text-align: center; padding: 1px; backdrop-filter: blur(10px);">
+    <p>&copy; <span id="year">2025</span> 邵阳市第一中学信息技术社团</p>
+</footer>
+<script src="https://sysyz-itcom.github.io/doc/components/js/year.js"></script>
+</html>
